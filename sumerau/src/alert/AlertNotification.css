@@ -1,0 +1,27 @@
+/* AlertNotification.css */
+
+.alert-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .alert-notification.visible {
+    display: block;
+  }
+  
+  .success {
+    background-color: #28a745; /* Green background for success */
+  }
+  
+  .error {
+    background-color: #dc3545; /* Red background for error */
+  }
+  
+  /* Add more styles for different alert types if needed */
+  

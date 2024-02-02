@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import AlertNotification from './alert/AlertNotification';
 import ResumeButton from './ResumeButton';
+
 import Linkedin_Logo from './images/linkedin_icon_full.png';
 import Github_Logo from './images/github_icon.png';
 import './App.css';
@@ -23,6 +25,15 @@ const projectsData = [
 
 function App() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [alert, setAlert] = useState(null);
+
+  const showAlert = (message, type) => {
+    setAlert({ message, type });
+  };
+
+  const closeAlert = () => {
+    setAlert(null);
+  };
 
   const handleProjectClick = (projectId) => {
     setSelectedProject(projectId === selectedProject ? null : projectId);
@@ -60,11 +71,18 @@ function App() {
             <img src={Github_Logo} alt="Github" className='App-logo'/>
           </a>
         </div>
-        <div>
-          <ResumeButton />
-        </div>
+
+        <ResumeButton />
         
       </footer>
+
+      {alert && (
+        <AlertNotification
+          message={alert.message}
+          type={alert.type}
+          onClose={closeAlert}
+        />
+      )} 
     </div>
   );
 }

@@ -45,6 +45,41 @@ body {
   justify-content: center;
 }
 
+.Button {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+button {
+  background-color: #F7F4EF;
+  border: 1px solid #282c34;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #282c34;
+  cursor: pointer;
+  
+  width: 100px;
+  padding: 0 10px 0 11px;
+  position: relative;
+
+  font-family: Georgia, Cambria, Cochin, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+button:hover {
+  background-color: #282c34;
+  color: #F7F4EF;
+}
+
 .App-logo {
   height: 30px;
 
